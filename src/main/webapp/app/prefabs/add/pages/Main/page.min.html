@@ -1,0 +1,214 @@
+<style id="Main.css">
+
+</style>
+<script id="Main.js">
+Application.$controller("AddController", ["$scope", function ($scope) {
+	"use strict";
+
+	/* 
+	 * This function will be invoked when any of this prefab's property is changed
+	 * @key: property name
+	 * @newVal: new value of the property
+	 * @oldVal: old value of the property
+	 */
+	function propertyChangeHandler(key, newVal, oldVal) {
+		/*
+		switch (key) {
+			case "prop1":
+				// do something with newVal for property 'prop1'
+				break;
+			case "prop2":
+				// do something with newVal for property 'prop2'
+				break;
+		}
+		*/
+	}
+	/* register the property change handler */
+	$scope.propertyManager.add($scope.propertyManager.ACTIONS.CHANGE, propertyChangeHandler);
+
+	$scope.onInitPrefab = function() {
+		// this method will be triggered post initialization of the prefab.
+	}
+}]);
+</script>
+<script id="Main.variables.json">
+var _MainPage_Variables_ ={
+  "AdditionProgAdd" : {
+    "_id" : "wm-AdditionProgAdd-wm.ServiceVariable-1460985621356",
+    "name" : "AdditionProgAdd",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "num1",
+      "value" : "bind:Widgets.txtNum1.datavalue",
+      "type" : "integer"
+    }, {
+      "target" : "num2",
+      "value" : "bind:Widgets.txtNum2.datavalue",
+      "type" : "integer"
+    } ],
+    "type" : "integer",
+    "service" : "AdditionProg",
+    "operation" : "add",
+    "operationType" : "post",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/additionProg/add",
+      "httpMethod" : "post",
+      "name" : "add",
+      "produces" : [ "application/xml", "application/json" ],
+      "parameters" : [ {
+        "name" : "num1",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "num2",
+        "parameterType" : "query",
+        "type" : "integer"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "AdditionProg"
+  },
+  "AdditionProgSampleJavaOperation" : {
+    "_id" : "wm-AdditionProgSampleJavaOperation-wm.ServiceVariable-1460985621361",
+    "name" : "AdditionProgSampleJavaOperation",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "string",
+    "service" : "AdditionProg",
+    "operation" : "sampleJavaOperation",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/additionProg/sampleJavaOperation",
+      "httpMethod" : "get",
+      "name" : "sampleJavaOperation",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "name",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "serviceVariable1" : {
+    "_id" : "wm-serviceVariable1-wm.ServiceVariable-1460985670929",
+    "name" : "serviceVariable1",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "integer",
+    "service" : "AdditionProg",
+    "operation" : "add",
+    "operationType" : "post",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/additionProg/add",
+      "httpMethod" : "post",
+      "name" : "add",
+      "produces" : [ "application/xml", "application/json" ],
+      "parameters" : [ {
+        "name" : "num1",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "num2",
+        "parameterType" : "query",
+        "type" : "integer"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeAll",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "AdditionProg"
+  },
+  "supportedLocale" : {
+    "_id" : "wm-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "en" : "English"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}
+</script>
+<script id="Main.html" type="text/ng-template">
+<wm-page data-ng-controller="AddController" name="page1">
+    <wm-view class="container" backgroundcolor="#fff" name="view1">
+        <wm-layoutgrid name="layoutgrid1">
+            <wm-gridrow name="gridrow1">
+                <wm-gridcolumn columnwidth="4" name="gridcolumn1">
+                    <wm-composite name="composite1">
+                        <wm-label class="col-md-3 control-label" name="label1" caption="num1"></wm-label>
+                        <wm-container class="col-md-9" name="container1">
+                            <wm-text name="txtNum1" type="number"></wm-text>
+                        </wm-container>
+                    </wm-composite>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="4" name="gridcolumn2">
+                    <wm-composite name="composite2">
+                        <wm-label class="col-md-3 control-label" name="label2" caption="num2"></wm-label>
+                        <wm-container class="col-md-9" name="container2">
+                            <wm-text name="txtNum2" type="number"></wm-text>
+                        </wm-container>
+                    </wm-composite>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="4" name="gridcolumn3"></wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow2">
+                <wm-gridcolumn columnwidth="4" name="gridcolumn4">
+                    <wm-button class="btn-default" caption="Button" type="button" name="button1" on-click="AdditionProgAdd"></wm-button>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="4" name="gridcolumn5">
+                    <wm-label name="label3" caption="bind:Variables.AdditionProgAdd.dataSet.value"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="4" name="gridcolumn6"></wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow3">
+                <wm-gridcolumn columnwidth="4" name="gridcolumn7"></wm-gridcolumn>
+                <wm-gridcolumn columnwidth="4" name="gridcolumn8"></wm-gridcolumn>
+                <wm-gridcolumn columnwidth="4" name="gridcolumn9"></wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-view>
+</wm-page>
+</script>

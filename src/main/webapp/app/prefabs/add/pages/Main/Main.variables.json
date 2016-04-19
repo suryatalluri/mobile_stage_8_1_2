@@ -1,0 +1,138 @@
+{
+  "AdditionProgAdd" : {
+    "_id" : "wm-AdditionProgAdd-wm.ServiceVariable-1460985621356",
+    "name" : "AdditionProgAdd",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "num1",
+      "value" : "bind:Widgets.txtNum1.datavalue",
+      "type" : "integer"
+    }, {
+      "target" : "num2",
+      "value" : "bind:Widgets.txtNum2.datavalue",
+      "type" : "integer"
+    } ],
+    "type" : "integer",
+    "service" : "AdditionProg",
+    "operation" : "add",
+    "operationType" : "post",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/additionProg/add",
+      "httpMethod" : "post",
+      "name" : "add",
+      "produces" : [ "application/xml", "application/json" ],
+      "parameters" : [ {
+        "name" : "num1",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "num2",
+        "parameterType" : "query",
+        "type" : "integer"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "AdditionProg"
+  },
+  "AdditionProgSampleJavaOperation" : {
+    "_id" : "wm-AdditionProgSampleJavaOperation-wm.ServiceVariable-1460985621361",
+    "name" : "AdditionProgSampleJavaOperation",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "string",
+    "service" : "AdditionProg",
+    "operation" : "sampleJavaOperation",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/additionProg/sampleJavaOperation",
+      "httpMethod" : "get",
+      "name" : "sampleJavaOperation",
+      "produces" : [ "application/json" ],
+      "parameters" : [ {
+        "name" : "name",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "serviceVariable1" : {
+    "_id" : "wm-serviceVariable1-wm.ServiceVariable-1460985670929",
+    "name" : "serviceVariable1",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "integer",
+    "service" : "AdditionProg",
+    "operation" : "add",
+    "operationType" : "post",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/additionProg/add",
+      "httpMethod" : "post",
+      "name" : "add",
+      "produces" : [ "application/xml", "application/json" ],
+      "parameters" : [ {
+        "name" : "num1",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "num2",
+        "parameterType" : "query",
+        "type" : "integer"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeAll",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "AdditionProg"
+  },
+  "supportedLocale" : {
+    "_id" : "wm-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "en" : "English"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}

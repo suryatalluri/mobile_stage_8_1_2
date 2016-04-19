@@ -1,0 +1,38 @@
+<style id="Page.css">
+
+</style>
+<script id="Page.js">
+Application.$controller("PagePageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+</script>
+<script id="Page.variables.json">
+var _PagePage_Variables_ ={}
+</script>
+<script id="Page.html" type="text/ng-template">
+<wm-page data-ng-controller="PagePageController" name="page1">
+    <wm-left-panel content="leftnav" name="left_panel1"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-prefab prefabname="add" name="add1"></wm-prefab>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar dataset="home,star,music" name="mobile_tabbar1"></wm-mobile-tabbar>
+</wm-page>
+</script>

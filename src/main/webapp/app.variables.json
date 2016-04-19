@@ -30,6 +30,154 @@
     },
     "startUpdate" : true
   },
+  "FileServiceDeleteFile" : {
+    "_id" : "wm-FileServiceDeleteFile-wm.ServiceVariable-1461070150046",
+    "name" : "FileServiceDeleteFile",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "boolean",
+    "service" : "FileService",
+    "operation" : "deleteFile",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/file/file",
+      "httpMethod" : "delete",
+      "name" : "deleteFile",
+      "produces" : [ "application/xml", "application/json" ],
+      "parameters" : [ {
+        "name" : "file",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "FileServiceGetDownloadFile" : {
+    "_id" : "wm-FileServiceGetDownloadFile-wm.ServiceVariable-1461070150042",
+    "name" : "FileServiceGetDownloadFile",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.wavemaker.runtime.file.model.DownloadResponse",
+    "service" : "FileService",
+    "operation" : "getDownloadFile",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/file/downloadFile",
+      "httpMethod" : "get",
+      "name" : "getDownloadFile",
+      "produces" : [ "application/octet-stream" ],
+      "parameters" : [ {
+        "name" : "file",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "returnName",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "FileServiceGetDownloadFileAsInline" : {
+    "_id" : "wm-FileServiceGetDownloadFileAsInline-wm.ServiceVariable-1461070150046",
+    "name" : "FileServiceGetDownloadFileAsInline",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.wavemaker.runtime.file.model.DownloadResponse",
+    "service" : "FileService",
+    "operation" : "getDownloadFileAsInline",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/file/downloadFileAsInline",
+      "httpMethod" : "get",
+      "name" : "getDownloadFileAsInline",
+      "produces" : [ "application/octet-stream" ],
+      "parameters" : [ {
+        "name" : "file",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "returnName",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "FileServiceListFiles" : {
+    "_id" : "wm-FileServiceListFiles-wm.ServiceVariable-1461070150047",
+    "name" : "FileServiceListFiles",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.mobile_stage_8_1_2.fileservice.FileService.WMFile",
+    "service" : "FileService",
+    "operation" : "listFiles",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/file/files",
+      "httpMethod" : "post",
+      "name" : "listFiles",
+      "produces" : [ "application/xml", "application/json" ],
+      "parameters" : [ {
+        "name" : "relativePath",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
   "FileServiceUploadFile" : {
     "_id" : "wm-FileServiceUploadFile-wm.ServiceVariable-1461068232232",
     "name" : "FileServiceUploadFile",
@@ -77,6 +225,16 @@
     "category" : "wm.NavigationVariable",
     "operation" : "gotoPage",
     "pageName" : "Main"
+  },
+  "goToPage_Page" : {
+    "_id" : "wm-goToPage_Page-wm.NavigationVariable-1461070013381",
+    "name" : "goToPage_Page",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page",
+    "pageTransitions" : "none"
   },
   "HrdbDepartmentData" : {
     "_id" : "wm-HrdbDepartmentData-wm.LiveVariable-1461068548365",
@@ -1068,6 +1226,7 @@
         "relatedTableName" : "EMPLOYEE",
         "relatedEntityName" : "Employee",
         "relatedFieldName" : "employee.eid",
+        "isList" : false,
         "targetTable" : "EMPLOYEE",
         "scale" : 0,
         "columns" : [ {
@@ -1356,6 +1515,68 @@
       "package" : "com.hrdb.Vacation"
     } ],
     "package" : "com.hrdb.Vacation"
+  },
+  "loggedInUser" : {
+    "_id" : "wm-loggedInUser-wm.Variable-1461069241485",
+    "name" : "loggedInUser",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "name" : "",
+      "id" : "",
+      "tenantId" : "",
+      "isAuthenticated" : false,
+      "isSecurityEnabled" : true,
+      "roles" : [ ]
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "loginVariable" : {
+    "_id" : "wm-loginVariable-wm.LoginVariable-1461069241484",
+    "name" : "loginVariable",
+    "owner" : "App",
+    "category" : "wm.LoginVariable",
+    "dataBinding" : [ {
+      "target" : "username",
+      "value" : "bind:Widgets.usernametext.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "password",
+      "value" : "bind:Widgets.passwordtext.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "rememberme",
+      "value" : "bind:Widgets.remembermecheck.datavalue",
+      "type" : "boolean"
+    } ],
+    "dataSet" : {
+      "username" : "",
+      "password" : "",
+      "rememberme" : false
+    },
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "onError" : "Javascript",
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "useDefaultSuccessHandler" : true
+  },
+  "logoutVariable" : {
+    "_id" : "wm-logoutVariable-wm.LogoutVariable-1461069241485",
+    "name" : "logoutVariable",
+    "owner" : "App",
+    "category" : "wm.LogoutVariable",
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "redirectTo" : "Login",
+    "useDefaultSuccessHandler" : true
   },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",

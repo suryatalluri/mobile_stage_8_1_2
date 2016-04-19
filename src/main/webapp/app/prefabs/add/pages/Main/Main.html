@@ -1,0 +1,39 @@
+<wm-page data-ng-controller="AddController" name="page1">
+    <wm-view class="container" backgroundcolor="#fff" name="view1">
+        <wm-layoutgrid name="layoutgrid1">
+            <wm-gridrow name="gridrow1">
+                <wm-gridcolumn columnwidth="4" name="gridcolumn1">
+                    <wm-composite name="composite1">
+                        <wm-label class="col-md-3 control-label" name="label1" caption="num1"></wm-label>
+                        <wm-container class="col-md-9" name="container1">
+                            <wm-text name="txtNum1" type="number"></wm-text>
+                        </wm-container>
+                    </wm-composite>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="4" name="gridcolumn2">
+                    <wm-composite name="composite2">
+                        <wm-label class="col-md-3 control-label" name="label2" caption="num2"></wm-label>
+                        <wm-container class="col-md-9" name="container2">
+                            <wm-text name="txtNum2" type="number"></wm-text>
+                        </wm-container>
+                    </wm-composite>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="4" name="gridcolumn3"></wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow2">
+                <wm-gridcolumn columnwidth="4" name="gridcolumn4">
+                    <wm-button class="btn-default" caption="Button" type="button" name="button1" on-click="AdditionProgAdd"></wm-button>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="4" name="gridcolumn5">
+                    <wm-label name="label3" caption="bind:Variables.AdditionProgAdd.dataSet.value"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="4" name="gridcolumn6"></wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow3">
+                <wm-gridcolumn columnwidth="4" name="gridcolumn7"></wm-gridcolumn>
+                <wm-gridcolumn columnwidth="4" name="gridcolumn8"></wm-gridcolumn>
+                <wm-gridcolumn columnwidth="4" name="gridcolumn9"></wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-view>
+</wm-page>
