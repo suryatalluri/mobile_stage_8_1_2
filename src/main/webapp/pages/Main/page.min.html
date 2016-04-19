@@ -20,6 +20,13 @@ Application.$controller("MainPageController", ["$scope", function ($scope) {
 
 }]);
 
+
+Application.$controller("liveform1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
 </script>
 <script id="Main.variables.json">
 var _MainPage_Variables_ ={}
@@ -46,6 +53,96 @@ var _MainPage_Variables_ ={}
                     </wm-layoutgrid>
                 </wm-listtemplate>
             </wm-livelist>
+            <wm-liveform novalidate="false" formlayout="inline" defaultmode="Edit" dataset="bind:Variables.HrdbEmployeeData.dataSet" captionalign="left" captionposition="top" formdata="bind:Widgets.livelist1.selecteditem" name="liveform1">
+                <wm-layoutgrid name="layoutgrid2">
+                    <wm-gridrow name="gridrow2">
+                        <wm-gridcolumn columnwidth="12" show="hide" name="gridcolumn3">
+                            <wm-form-field name="eid" displayname="Eid" required="true" show="false" generator="identity" primary-key="true" key="eid" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn4">
+                            <wm-form-field name="firstname" displayname="Firstname" required="false" show="true" generator="assigned" primary-key="false" key="firstname" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true"
+                            widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn5">
+                            <wm-form-field name="lastname" displayname="Lastname" required="false" show="true" generator="assigned" primary-key="false" key="lastname" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true"
+                            widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow4">
+                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn6">
+                            <wm-form-field name="street" displayname="Street" required="false" show="true" generator="assigned" primary-key="false" key="street" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow5">
+                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn7">
+                            <wm-form-field name="city" displayname="City" required="false" show="true" generator="assigned" primary-key="false" key="city" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow6">
+                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn8">
+                            <wm-form-field name="state" displayname="State" required="false" show="true" generator="assigned" primary-key="false" key="state" type="string" is-related="false" maxchars="2" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow7">
+                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn9">
+                            <wm-form-field name="zip" displayname="Zip" required="false" show="true" generator="assigned" primary-key="false" key="zip" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow8">
+                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn10">
+                            <wm-form-field name="birthdate" displayname="Birthdate" required="false" show="true" generator="assigned" primary-key="false" key="birthdate" type="date" is-related="false" pc-display="true" mobile-display="true" widget="date"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow9">
+                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn11">
+                            <wm-form-field name="picurl" displayname="Picurl" required="false" show="true" generator="assigned" primary-key="false" key="picurl" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow10">
+                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn12">
+                            <wm-form-field name="jobtitle" displayname="Jobtitle" required="false" show="true" generator="assigned" primary-key="false" key="jobtitle" type="string" is-related="false" maxchars="40" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow11">
+                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn13">
+                            <wm-form-field name="username" displayname="Username" required="false" show="true" generator="assigned" primary-key="false" key="username" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true"
+                            widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow12">
+                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn14">
+                            <wm-form-field name="password" displayname="Password" required="false" show="true" generator="assigned" primary-key="false" key="password" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true"
+                            widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow13">
+                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn15">
+                            <wm-form-field name="role" displayname="Role" required="false" show="true" generator="assigned" primary-key="false" key="role" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow14">
+                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn16">
+                            <wm-form-field name="tenantid" displayname="Tenantid" required="false" show="true" generator="assigned" primary-key="false" key="tenantid" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow15">
+                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn17">
+                            <wm-form-field name="department" displayname="Department" required="false" show="true" generator="assigned" primary-key="false" key="department" type="list" is-related="true" pc-display="true" mobile-display="true" widget="select"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow16">
+                        <wm-gridcolumn columnwidth="12" show="show" name="gridcolumn18">
+                            <wm-form-field name="employeeByManagerid" displayname="Employee By Managerid" required="false" show="true" generator="assigned" primary-key="false" key="employeeByManagerid" type="list" is-related="true" pc-display="true" mobile-display="true"
+                            widget="select"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow17"></wm-gridrow>
+                </wm-layoutgrid>
+                <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+            </wm-liveform>
         </wm-page-content>
     </wm-content>
     <wm-mobile-tabbar dataset="home,star,music" name="mobile_tabbar1"></wm-mobile-tabbar>
