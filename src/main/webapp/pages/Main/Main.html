@@ -1,10 +1,25 @@
-<wm-page data-ng-controller="MainPageController" name="mainpage">
-  <wm-left-panel content="leftnav" columnwidth="2" name="left_panel1"></wm-left-panel>
-  <wm-mobile-navbar name="mobile_navbar1" title="Title" leftnavpaneliconclass="wi wi-menu" backbutton="false">
-    <wm-anchor caption="" name="AddLink" iconclass="wi wi-plus"></wm-anchor>
-  </wm-mobile-navbar>
-  <wm-content name="content1">
-    <wm-page-content columnwidth="12" name="page_content1"></wm-page-content>
-  </wm-content>
-  <wm-mobile-tabbar dataset="home,music,edit" name="mobile_tabbar1"></wm-mobile-tabbar>
+<wm-page data-ng-controller="MainPageController" name="page1">
+    <wm-left-panel content="leftnav" name="left_panel1"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-fileupload name="fileupload1" contenttype="image" service="FileService" operation="uploadFile"></wm-fileupload>
+            <wm-livelist listclass="list-group" itemclass="list-group-item" template="true" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="None" name="livelist1">
+                <wm-listtemplate layout="media" name="listtemplate1">
+                    <wm-layoutgrid height="100" name="layoutgrid1">
+                        <wm-gridrow height="100%" name="gridrow1">
+                            <wm-gridcolumn columnwidth="9" name="gridcolumn1">
+                                <wm-label caption="bind:Variables.HrdbEmployeeData.dataSet.firstname" name="Message" class="media-heading h4"></wm-label>
+                                <wm-label caption="bind:Variables.HrdbEmployeeData.dataSet.street" class="text-muted small" name="Duration" width="100%"></wm-label>
+                            </wm-gridcolumn>
+                            <wm-gridcolumn class="media-right" columnwidth="3" name="gridcolumn2">
+                                <wm-picture class="media-object" height="100%" name="Picture" picturesource="bind:Variables.HrdbEmployeeData.dataSet.picurl"></wm-picture>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                </wm-listtemplate>
+            </wm-livelist>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar dataset="home,star,music" name="mobile_tabbar1"></wm-mobile-tabbar>
 </wm-page>
